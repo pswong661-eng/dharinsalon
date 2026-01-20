@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharin Massage & Salon | Calm Refresh in Vientiane (Parkson Mall)</title>
+    <meta name="description" content="Escape heat & dust at Dharin Massage & Salon in Parkson Mall, Vientiane. Minimalist space for facial, hair care, massage chairs. Hygienic, relaxing, Tourist-friendly. Walk-ins welcome.">
+    <meta name="keywords" content="Best Salon Vientiane, Facial Vientiane, Massage Chair Laos, Gentle Speaking Staff, Parkson Mall Relaxation">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: #FDFDF5;
+            color: #333;
+            line-height: 1.7;
+        }
+        .container { max-width:980px; margin:0 auto; padding:0 24px; }
+        header.hero {
+            background: linear-gradient(rgba(250,249,245,0.92), rgba(250,249,245,0.88)), url('./Dharin.jpeg') center/cover no-repeat;
+            text-align:center;
+            padding: 100px 20px 180px;
+            border-bottom:1px solid #e0e0e0;
+            position:relative;
+        }
+        .logo-top {
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 40px auto;
+        }
+        h1 { font-size:2.1rem; font-weight:500; margin-bottom:16px; letter-spacing:-0.5px; color:#222; }
+        .subtitle { font-size:1.1rem; color:#555; max-width:680px; margin:0 auto 32px; }
+        .btn {
+            display:inline-block;
+            background:#E0D9C8;
+            color:#333;
+            padding:12px 32px;
+            text-decoration:none;
+            font-weight:500;
+            font-size:1rem;
+            border:1px solid #d2c9b6;
+            transition:all 0.2s ease;
+        }
+        .btn:hover { background:#d2c9b6; border-color:#c0b7a4; }
+        section { padding:80px 0 60px; }
+        h2 { font-size:1.6rem; font-weight:500; text-align:center; margin-bottom:48px; color:#444; }
+        .services-grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+            gap:40px 24px;
+        }
+        .service-card {
+            background:transparent;
+            text-align:center;
+            border:1px solid #eee;
+            padding:28px 20px;
+        }
+        .service-card img {
+            width:100%;
+            height:auto;
+            object-fit:contain;
+            margin-bottom:20px;
+	    background: #f9f9f9;	
+        }
+	.gallery img {
+	    width: 100%;
+            height: auto;                /* ← add this */
+            object-fit: contain;         /* ← change from cover to contain */
+            border: 1px solid #eee;
+        }
+        .service-card h3 { font-size:1.25rem; font-weight:500; margin-bottom:12px; }
+        .service-card p { color:#666; font-size:0.95rem; }
+        .usp {
+            background:#F8F7F4;
+            padding:80px 0;
+            text-align:center;
+        }
+        .usp ul {
+            list-style:none;
+            max-width:720px;
+            margin:0 auto 40px;
+            text-align:left;
+        }
+        .usp li {
+            font-size:1.05rem;
+            margin-bottom:24px;
+            position:relative;
+            padding-left:32px;
+        }
+        .usp li::before {
+            content:'—';
+            position:absolute;
+            left:0;
+            color:#aaa;
+            font-size:1.5rem;
+            top:-4px;
+        }
+        .gallery {
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+            gap:16px;
+        }
+        .gallery img {
+            width:100%;
+            height:200px;
+            object-fit:cover;
+            border:1px solid #eee;
+        }
+        footer {
+            background:#f5f5f5;
+            color:#555;
+            text-align:center;
+            padding:60px 20px 40px;
+            border-top:1px solid #e0e0e0;
+        }
+        footer img { max-width:220px; margin-bottom:24px; display:block; margin-left:auto; margin-right:auto; }
+        footer a { color:#666; text-decoration:none; }
+        footer a:hover { color:#333; }
+        .fixed-cta {
+            position:fixed;
+            bottom:0; left:0; width:100%;
+            background:#E0D9C8;
+            text-align:center; padding:14px;
+            border-top:1px solid #d2c9b6;
+            z-index:1000;
+            font-size:1rem;
+            font-weight:500;
+        }
+        .fixed-cta a { color:#333; text-decoration:none; }
+        .lang-switcher {
+            position:absolute;
+            top:24px; right:24px;
+            z-index:10;
+        }
+        .lang-switcher select {
+            padding:6px 12px;
+            font-size:0.9rem;
+            border:1px solid #ccc;
+            background:white;
+            color:#333;
+            cursor:pointer;
+        }
+        @media (max-width:768px) {
+            h1 { font-size:1.8rem; }
+            header.hero { padding:100px 20px 80px; }
+            .logo-top { max-width: 240px; margin-bottom: 32px; }
+            section { padding:60px 0 40px; }
+            .lang-switcher { top:16px; right:16px; }
+        }
+    </style></head>
+<body data-lang="en">
+
+    <div class="lang-switcher">
+        <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="zh">简体中文</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="vi">Tiếng Việt</option>
+        </select>
+    </div>
+
+    <header class="hero">
+        <div class="container">
+            <h1 data-key="hero-title">A Calm Refresh at Dharin Massage & Salon</h1>
+            <p class="subtitle" data-key="hero-subtitle">Minimalist sanctuary in Parkson Mall, Vientiane. Gentle facials, hair care, and zero-gravity massage chairs for travelers seeking hygiene, peace, and real relaxation.</p>
+            <a href="tel:+8562057909997" class="btn" data-key="btn-book">Book or Walk In</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="services">
+            <div class="container">
+                <h2 data-key="services-title">Our Careful Treatments</h2>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <img src="./Facial Spa 2.jpeg" alt="Facial Treatment">
+                        <h3 data-key="service1-title">Facial & Skin Care</h3>
+                        <p data-key="service1-desc">Deep cleansing, hydration, exfoliation & massage for glowing, refreshed skin.</p>
+                    </article>
+                    <article class="service-card">
+                        <img src="./Hair Spa.jpeg" alt="Hair Washing & Care">
+                        <h3 data-key="service2-title">Hair Washing & Care</h3>
+                        <p data-key="service2-desc">Premium shampoo & scalp massage to remove dust and restore shine.</p>
+                    </article>
+                    <article class="service-card">
+                        <img src="./Massage Chair 2.jpeg" alt="Massage Chair Experience">
+                        <h3 data-key="service3-title">Massage Chair Experience</h3>
+                        <p data-key="service3-desc">Zero-gravity floating relaxation — relieve fatigue in minutes.</p>
+                    </article>
+                    <article class="service-card">
+                        <img src="./Customers.jpeg" alt="Massage Chair Sales">
+                        <h3 data-key="service4-title">Massage Chair Sales</h3>
+                        <p data-key="service4-desc">High-quality, affordable chairs — bring luxury relaxation home.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="usp">
+            <div class="container">
+                <h2 data-key="usp-title">Why Choose Dharin</h2>
+                <ul>
+                    <li data-key="usp1">Central Parkson Mall — air-conditioned, clean, convenient.</li>
+                    <li data-key="usp2">English-speaking staff — easy for international visitors.</li>
+                    <li data-key="usp3">Strict hygiene & genuine care in every service.</li>
+                </ul>
+                <div class="gallery">
+                    <img src="./Staff Professional.jpeg" alt="Professional Staff Caring for You">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <img src="./Logo.jpeg" alt="Dharin Massage & Salon">
+            <p data-key="footer-address">3rd Floor, Parkson Mall, Vientiane, Laos</p>
+            <p data-key="footer-hours">Open Daily 10:00 – 19:00</p>
+            <p data-key="footer-phone">Phone: <a href="tel:+8562057909997">+856 20 57 909 997</a></p>
+            <p><a href="https://maps.app.goo.gl/n1fFvh5sC3GqqS1S6" target="_blank" data-key="footer-maps">View on Map</a></p>
+            <p style="margin-top:32px; font-size:0.85rem;" data-key="footer-copyright">© 2026 Dharin Massage & Salon</p>
+        </div>
+    </footer>
+
+    <div class="fixed-cta">
+        <a href="tel:+8562057909997" data-key="fixed-cta">Call to Book Your Calm Escape</a>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                "hero-title": "A Calm Refresh at Dharin Massage & Salon",
+                "hero-subtitle": "Minimalist sanctuary in Parkson Mall, Vientiane. Gentle facials, hair care, and zero-gravity massage chairs for travelers seeking hygiene, peace, and real relaxation.",
+                "btn-book": "Book or Walk In",
+                "services-title": "Our Careful Treatments",
+                "service1-title": "Facial & Skin Care",
+                "service1-desc": "Deep cleansing, hydration, exfoliation & massage for glowing, refreshed skin.",
+                "service2-title": "Hair Washing & Care",
+                "service2-desc": "Premium shampoo & scalp massage to remove dust and restore shine.",
+                "service3-title": "Massage Chair Experience",
+                "service3-desc": "Zero-gravity floating relaxation — relieve fatigue in minutes.",
+                "service4-title": "Massage Chair Sales",
+                "service4-desc": "High-quality, affordable chairs — bring luxury relaxation home.",
+                "usp-title": "Why Choose Dharin",
+                "usp1": "Central Parkson Mall — air-conditioned, clean, convenient.",
+                "usp2": "English-speaking staff — easy for international visitors.",
+                "usp3": "Strict hygiene & genuine care in every service.",
+                "footer-address": "3rd Floor, Parkson Mall, Vientiane, Laos",
+                "footer-hours": "Open Daily 10:00 – 19:00",
+                "footer-phone": "Phone:",
+                "footer-maps": "View on Map",
+                "footer-copyright": "© 2026 Dharin Massage & Salon",
+                "fixed-cta": "Call to Book Your Calm Escape"
+            },
+            zh: {
+                "hero-title": "在万象宁静焕新 — Dharin 按摩与沙龙",
+                "hero-subtitle": "Parkson商场内的极简庇护所。温柔面部护理、头发护理及零重力按摩椅，专为寻求卫生、平静与真正放松的旅行者设计。",
+                "btn-book": "预约或直接到店",
+                "services-title": "我们的疗程",
+                "service1-title": "面部与皮肤护理",
+                "service1-desc": "深层清洁、保湿、去角质与按摩，让肌肤焕发光彩。",
+                "service2-title": "洗发与护理",
+                "service2-desc": "高级洗发与头皮按摩，去除灰尘并恢复光泽。",
+                "service3-title": "按摩椅体验",
+                "service3-desc": "零重力漂浮放松 — 几分钟缓解疲劳。",
+                "service4-title": "按摩椅销售",
+                "service4-desc": "高品质实惠按摩椅 — 将奢华放松带回家。",
+                "usp-title": "为什么选择Dharin",
+                "usp1": "Parkson商场中心位置 — 空调、干净、交通便利。",
+                "usp2": "英语服务人员 — 方便国际访客。",
+                "usp3": "严格卫生与真诚关怀贯穿每项服务。",
+                "footer-address": "老挝万象Parkson商场3楼",
+                "footer-hours": "每日开放 10:00 – 19:00",
+                "footer-phone": "电话：",
+                "footer-maps": "查看地图",
+                "footer-copyright": "© 2026 Dharin 按摩与沙龙",
+                "fixed-cta": "致电预约您的宁静逃离"
+            },
+            es: {
+                "hero-title": "Un Refrescante Calmo en Dharin Massage & Salon",
+                "hero-subtitle": "Santuario minimalista en Parkson Mall, Vientiane. Faciales suaves, cuidado del cabello y sillas de masaje de gravedad cero para viajeros que buscan higiene, paz y relajación real.",
+                "btn-book": "Reservar o Entrar Sin Cita",
+                "services-title": "Nuestros Tratamientos",
+                "service1-title": "Facial y Cuidado de la Piel",
+                "service1-desc": "Limpieza profunda, hidratación, exfoliación y masaje para piel radiante y renovada.",
+                "service2-title": "Lavado y Cuidado del Cabello",
+                "service2-desc": "Champú premium y masaje de cuero cabelludo para eliminar polvo y restaurar brillo.",
+                "service3-title": "Experiencia en Silla de Masaje",
+                "service3-desc": "Relajación flotante de gravedad cero — alivia la fatiga en minutos.",
+                "service4-title": "Venta de Sillas de Masaje",
+                "service4-desc": "Sillas de alta calidad y asequibles — lleva la relajación de lujo a casa.",
+                "usp-title": "Por Qué Elegir Dharin",
+                "usp1": "Ubicación central en Parkson Mall — aire acondicionado, limpio, conveniente.",
+                "usp2": "Personal que habla inglés — fácil para visitantes internacionales.",
+                "usp3": "Higiene estricta y cuidado genuino en cada servicio.",
+                "footer-address": "3er Piso, Parkson Mall, Vientiane, Laos",
+                "footer-hours": "Abierto Diariamente 10:00 – 19:00",
+                "footer-phone": "Teléfono:",
+                "footer-maps": "Ver en el Mapa",
+                "footer-copyright": "© 2026 Dharin Massage & Salon",
+                "fixed-cta": "Llama para Reservar Tu Escape Calmo"
+            },
+            fr: {
+                "hero-title": "Un Rafraîchissement Calme chez Dharin Massage & Salon",
+                "hero-subtitle": "Sanctuaire minimaliste au Parkson Mall, Vientiane. Soins du visage doux, soins capillaires et fauteuils de massage zéro gravité pour les voyageurs en quête d'hygiène, de paix et de vraie détente.",
+                "btn-book": "Réserver ou Entrer Sans Rendez-vous",
+                "services-title": "Nos Soins",
+                "service1-title": "Soin du Visage & de la Peau",
+                "service1-desc": "Nettoyage profond, hydratation, exfoliation et massage pour une peau éclatante et renouvelée.",
+                "service2-title": "Lavage & Soin des Cheveux",
+                "service2-desc": "Shampoing premium et massage du cuir chevelu pour éliminer la poussière et restaurer la brillance.",
+                "service3-title": "Expérience Fauteuil de Massage",
+                "service3-desc": "Relaxation flottante zéro gravité — soulage la fatigue en quelques minutes.",
+                "service4-title": "Vente de Fauteuils de Massage",
+                "service4-desc": "Fauteuils de haute qualité et abordables — ramenez le luxe de la détente à la maison.",
+                "usp-title": "Pourquoi Choisir Dharin",
+                "usp1": "Emplacement central au Parkson Mall — climatisé, propre, pratique.",
+                "usp2": "Personnel anglophone — facile pour les visiteurs internationaux.",
+                "usp3": "Hygiène stricte et soin authentique dans chaque service.",
+                "footer-address": "3e Étage, Parkson Mall, Vientiane, Laos",
+                "footer-hours": "Ouvert Tous les Jours 10:00 – 19:00",
+                "footer-phone": "Téléphone :",
+                "footer-maps": "Voir sur la Carte",
+                "footer-copyright": "© 2026 Dharin Massage & Salon",
+                "fixed-cta": "Appelez pour Réserver Votre Évasion Calme"
+            },
+            vi: {
+                "hero-title": "Làm Mới Bình Yên tại Dharin Massage & Salon",
+                "hero-subtitle": "Không gian tối giản tại Parkson Mall, Vientiane. Chăm sóc da mặt nhẹ nhàng, chăm sóc tóc và ghế massage không trọng lực cho du khách tìm kiếm vệ sinh, bình yên và thư giãn thực sự.",
+                "btn-book": "Đặt lịch hoặc đến trực tiếp",
+                "services-title": "Các Liệu Trình Của Chúng Tôi",
+                "service1-title": "Chăm Sóc Da Mặt & Da",
+                "service1-desc": "Làm sạch sâu, dưỡng ẩm, tẩy tế bào chết & massage để da sáng mịn, tươi mới.",
+                "service2-title": "Gội Đầu & Chăm Sóc Tóc",
+                "service2-desc": "Dầu gội cao cấp & massage da đầu loại bỏ bụi bẩn và khôi phục độ bóng.",
+                "service3-title": "Trải Nghiệm Ghế Massage",
+                "service3-desc": "Thư giãn không trọng lực — giảm mệt mỏi chỉ trong vài phút.",
+                "service4-title": "Bán Ghế Massage",
+                "service4-desc": "Ghế chất lượng cao, giá phải chăng — mang sự thư giãn cao cấp về nhà.",
+                "usp-title": "Tại Sao Chọn Dharin",
+                "usp1": "Vị trí trung tâm Parkson Mall — máy lạnh, sạch sẽ, tiện lợi.",
+                "usp2": "Nhân viên nói tiếng Anh — dễ dàng cho du khách quốc tế.",
+                "usp3": "Vệ sinh nghiêm ngặt & chăm sóc chân thành trong mọi dịch vụ.",
+                "footer-address": "Tầng 3, Parkson Mall, Vientiane, Lào",
+                "footer-hours": "Mở cửa hàng ngày 10:00 – 19:00",
+                "footer-phone": "Điện thoại:",
+                "footer-maps": "Xem trên Bản đồ",
+                "footer-copyright": "© 2026 Dharin Massage & Salon",
+                "fixed-cta": "Gọi để đặt lịch thoát khỏi căng thẳng"
+            }
+        };
+
+        const langSelect = document.getElementById('languageSelect');
+        const html = document.documentElement;
+
+        function setLanguage(lang) {
+            document.body.dataset.lang = lang;
+            html.lang = lang === 'zh' ? 'zh-CN' : lang;
+
+            document.querySelectorAll('[data-key]').forEach(el => {
+                const key = el.dataset.key;
+                if (translations[lang] && translations[lang][key]) {
+                    if (el.tagName === 'A' && key === 'footer-phone') {
+                        el.innerHTML = translations[lang][key] + ' <a href="tel:+8562057909997">+856 20 57 909 997</a>';
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+        }
+
+        // Load saved preference or default to English
+        const savedLang = localStorage.getItem('preferredLang') || 'en';
+        langSelect.value = savedLang;
+        setLanguage(savedLang);
+
+        langSelect.addEventListener('change', (e) => {
+            const lang = e.target.value;
+            setLanguage(lang);
+            localStorage.setItem('preferredLang', lang);
+        });
+    </script>
+
+</body>
+</html>
