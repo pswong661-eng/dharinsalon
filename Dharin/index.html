@@ -39,7 +39,7 @@
         }
         .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); }
         
-        .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+        .nav-right { display: flex; align-items: center; gap: 1rem; }
         
         .nav-links { display: flex; gap: 2rem; }
         .nav-links a { font-weight: 500; font-size: 0.95rem; }
@@ -51,16 +51,33 @@
             padding: 0.6rem 1.2rem;
             border-radius: 50px;
             font-weight: bold;
+            white-space: nowrap; /* Prevents text breaking on small screens */
         }
         .btn-book:hover { background-color: #4a6354; }
 
-        /* Google Translate Styling overrides */
-        #google_translate_element { margin-right: 10px; }
-        .goog-te-gadget-simple { background-color: transparent !important; border: none !important; font-size: 14px !important; }
+        /* --- GOOGLE TRANSLATE FIXES --- */
+        /* This hides the "Powered by Google" branding and makes the dropdown neat */
+        #google_translate_element {
+            margin-right: 10px;
+            overflow: hidden;
+        }
+        .goog-te-gadget {
+            font-family: var(--font-main) !important;
+            font-size: 14px !important;
+            color: transparent !important; /* Hides the text 'Powered by Google' */
+        }
+        .goog-te-gadget .goog-te-combo {
+            margin: 0 !important;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #333;
+            background: #fff;
+        }
 
         /* --- HERO SECTION --- */
         .hero {
-            /* You can replace this background URL with a photo of your salon later if you wish */
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
@@ -95,26 +112,26 @@
         }
         .service-card {
             background: var(--white);
-            padding: 0; /* Remove padding so image touches edges */
+            padding: 0;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             text-align: center;
             transition: transform 0.3s ease;
-            overflow: hidden; /* Ensures image stays inside rounded corners */
+            overflow: hidden;
             display: flex;
             flex-direction: column;
         }
         .service-card:hover { transform: translateY(-5px); }
         
-        /* New Image Styling */
         .service-img {
             width: 100%;
-            height: 250px; /* Fixed height for uniformity */
-            object-fit: cover; /* Crops image nicely to fill the box */
+            height: 250px;
+            object-fit: cover;
         }
         
         .service-content {
             padding: 1.5rem;
+            flex-grow: 1;
         }
         .service-content h3 { margin-bottom: 1rem; color: var(--text-dark); }
         .service-content p { color: var(--text-light); font-size: 0.95rem; }
@@ -134,9 +151,10 @@
 
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
+            .nav-links { display: none; } /* Hide text links on mobile */
             .about-container { grid-template-columns: 1fr; }
             .hero-content h1 { font-size: 2rem; }
+            .nav-right { gap: 0.5rem; } /* Tighter spacing on mobile */
         }
     </style>
 </head>
@@ -162,7 +180,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>A Calm Refresh in Vientiane</h1>
-            <p>Minimalist sanctuary in Parkson Mall. Gentle facials, hair care, massage and zero-gravity relaxation.</p>
+            <p>Minimalist sanctuary in Parkson Mall. Gentle facials, hair care, and zero-gravity relaxation.</p>
             <a href="tel:+8562057909997" class="btn-book" style="display:inline-block;">Call to Reserve</a>
         </div>
     </section>
@@ -181,7 +199,7 @@
         <div class="service-grid">
             
             <div class="service-card">
-                <img src="Facial Spa 2.jpeg" alt="Facial Spa Treatment" class="service-img">
+                <img src="facial-spa.jpeg" alt="Facial Spa Treatment" class="service-img">
                 <div class="service-content">
                     <h3>Facial & Skin Care</h3>
                     <p>Deep cleansing, hydration, exfoliation, and massage for glowing, refreshed skin after your travels.</p>
@@ -189,18 +207,18 @@
             </div>
 
             <div class="service-card">
-                <img src="hair Spa.jpeg" alt="Hair Spa Treatment" class="service-img">
+                <img src="hair-spa.jpeg" alt="Hair Spa Treatment" class="service-img">
                 <div class="service-content">
                     <h3>Hair Washing & Spa</h3>
-                    <p>Premium shampooing and scalp massage to remove city dust and restore shine to your hair. included relaxation massage from head to your feet</p>
+                    <p>Premium shampooing and scalp massage to remove city dust and restore shine to your hair.</p>
                 </div>
             </div>
 
             <div class="service-card">
-                <img src="massage chair.jpeg" alt="Massage Chair" class="service-img">
+                <img src="massage-chair.jpeg" alt="Massage Chair" class="service-img">
                 <div class="service-content">
                     <h3>Massage Chair Experience</h3>
-                    <p>Zero-gravity floating relaxation. Relieve fatigue in minutes with our premium massage technology. Super affordable <$4 </p>
+                    <p>Zero-gravity floating relaxation. Relieve fatigue in minutes with our premium massage technology.</p>
                 </div>
             </div>
 
@@ -233,7 +251,7 @@
         function googleTranslateElementInit() {
           new google.translate.TranslateElement({
               pageLanguage: 'en', 
-              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+              /* Removed "layout: SIMPLE" to force standard Dropdown */
               autoDisplay: false
           }, 'google_translate_element');
         }
